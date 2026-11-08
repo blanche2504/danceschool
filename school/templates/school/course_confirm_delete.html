@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Conferma cancellazione del Corso {{ object.pk }}</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Conferma la cancellazione del corso: {{ object.subject }}</p>
+        <input type="submit" value="Conferma">
+    </form>
+{% endblock %}

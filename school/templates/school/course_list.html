@@ -1,0 +1,17 @@
+{% extends "base_list.html" %}
+{% block custom-type %}corsi{% endblock %}
+{% block list-header %}<th>Id</th><th>Nome</th>{% endblock %}
+{% block list-rows %}
+    {% for el in object_list %}
+        <tr>
+            <td>{{ el.id }}</td>
+            <td>{{ el.subject }}</td>
+            <td><a href="{% url 'course_detail' el.id %}">Mostra</a></td>
+            <td><a href="{% url 'course_update' el.id %}">Modifica</a></td>
+            <td><a href="{% url 'course_delete' el.id %}">Elimina</a></td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+{% block add-new %}
+    <p><a href="{% url 'course_create' %}">Aggiungi nuovo</a></p>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base_detail.html" %}
+{% block detail-content %}
+    <p>Id: {{ object.id }}</p>
+    <p>Nome: {{ object.subject }}</p>
+    <p>Scuola: {{ object.school }}</p>
+    <p>Sala: {{ object.classroom }}</p>
+    <p>Giorno: {{ object.day_of_the_week }}</p>
+    <p>Ora inizio: {{ object.starting_hour }}</p>
+    <p><a href="{% url 'course_update' object.id %}" title="Modifica corso">Modifica</a></p>
+    <p><a href="{% url 'course_list' %}" title="Torna alla lista dei corsi">Torna alla lista</a></p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base_list.html" %}
+{% block custom-type %}scuole{% endblock %}
+{% block list-header %}<th>Id</th><th>Nome</th><th>Indirizzo</th><th>Stato</th><th>Dettaglio</th>{% endblock %}
+{% block list-rows %}
+    {% for el in object_list %}
+        <tr>
+            <td>{{ el.id }}</td>
+            <td>{{ el.name }}</td>
+            <td>{{ el.full_address }}</td>
+            <td>{{ el.country }}</td>
+            <td><a href="{% url 'dettaglio_scuola' el.id %}">Mostra</a></td>
+        </tr>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base_detail.html" %}
+{% block detail-content %}
+    <p>Id: {{ object.id }}</p>
+    <p>Nome: {{ object.name }}</p>
+    <p>Indirizzo: {{ object.full_address }}</p>
+    <p>Paese: {{ object.country }}</p>
+    {% if object.email %}
+        <p>Email: {{ object.email }}</p>
+    {% endif %}
+{% endblock %}

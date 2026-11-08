@@ -1,0 +1,17 @@
+{% extends "base_list.html" %}
+{% block custom-type %}giorni della settimana{% endblock %}
+{% block list-header %}<th>Id</th><th>Nome</th><th>Numero</th>{% endblock %}
+{% block list-rows %}
+    {% for el in object_list %}
+        <tr>
+            <td>{{ el.id }}</td>
+            <td>{{ el.name }}</td>
+            <td>{{ el.number }}</td>
+            <td><a href="{% url 'dayoftheweek_detail' el.id %}">Mostra</a></td>
+            <td><a href="{% url 'dayoftheweek_update' el.id %}">Modifica</a></td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+{% block add-new %}
+    <p><a href="{% url 'dayoftheweek_create' %}">Aggiungi nuovo</a></p>
+{% endblock %}

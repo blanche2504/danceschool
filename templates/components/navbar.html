@@ -1,0 +1,13 @@
+{% load static %}
+<nav>
+    <a href="{% url 'home' %}" title="Vai a Homepage">
+        <img src="{% static 'img/logo.png' %}" alt="Logo della Scuola">
+    </a>
+    <a href="{% url 'about' %}" title="Vai a Chi siamo">Chi siamo</a>
+    <a href="{% url 'lista_scuole' %}" title="Vai a Lista delle Scuole">Scuole</a>
+    <a href="{% url 'course_list' %}" title="Vai a Lista dei Corsi">Corsi</a>
+    <a href="{% url 'classroom_list' %}" title="Vai a Lista delle Classi">Classi</a>
+    <a href="{% url 'dayoftheweek_list' %}" title="Vai a Lista dei Giorni">Giorni</a>
+    <a href="{% url 'admin:login' %}"
+       title="Vai al Pannello di Amministrazione">Admin</a>
+</nav>

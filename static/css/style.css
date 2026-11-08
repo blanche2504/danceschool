@@ -1,0 +1,41 @@
+html,
+body {
+    background: black;
+    color: white;
+}
+
+nav,
+main,
+footer {
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 95%;
+    border-bottom: 0.2rem solid white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    vertical-align: center;
+}
+
+nav > a {
+    line-height: 3rem;
+}
+
+nav > a > img {
+    height: 3rem;
+}
+
+table {
+    background-color: black;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid white;
+    margin: 0;
+    padding: 0.6rem;
+}
